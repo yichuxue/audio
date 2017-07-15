@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-06-25 17:21:13
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-07-15 22:45:26
+* @Last Modified time: 2017-07-15 23:09:57
 */
 
 ;(function($){
@@ -376,7 +376,6 @@
 
         /* 监听一次当鼠标点击执行播放 */
         play.one('click',function(){
-            console.log(1);
             _this.playAudio();
         });
         /* 监听，当点击时如果元素已经显示，则隐藏反之元素如果已经隐藏，则显示 */
@@ -421,18 +420,6 @@
                 }
             }
         })
-        // $(document).keydown(function(event){
-        //     if(event.keyCode == 32 ){
-        //         //判断音乐是否是播放状态
-        //         if(_this.audio.paused){
-        //             //暂停中
-        //             _this.playAudio();
-        //         }else{
-        //             //播放中
-        //             _this.stopAudio();
-        //         }
-        //     }
-        // });
         return _this;
     }
 
