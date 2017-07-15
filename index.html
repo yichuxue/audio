@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="首页关键字" />
+    <meta name="description" content="首页描述" />
+    <meta name="author" content="依初雪, 944301165@qq.com"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- 设置WAP浏览器缓存控制 -->
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <!-- 防止百度贴狗皮膏药 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- IOS6新增,添加到主屏后的标题 -->
+    <meta name="apple-mobile-web-app-title" content="标题">
+    <!-- 启用360浏览器极速模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>依初雪--H5音乐播放器</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body style="height:100%;">
+     
+    <!-- 视频背景 start -->
+    <div class="video" id="video">
+        <video id="videoAnimate" class="video_animate video" preload="metadata" loop autoplay muted>
+            <source src="./video/星灯.mp4"/>
+        </video>
+    </div>
+    <!-- 视频背景 end -->
+
+    <!-- 音频播放器 start -->
+    <div class="audio-box">
+        <div class="audio-view">
+            <!-- 音乐缩略图 -->
+            <div class="audio-cover" style="background-image:url('./image/"></div>
+            <!-- 音乐主体部分 -->
+            <div class="audio-body">
+                <!-- 音乐标题 -->
+                <h3 class="audio-title"></h3>
+                <!-- 开始时间和结束时间和进度条 -->
+                <div class="audio-backs">
+                    <div class="audio-this-time"></div>
+                    <div class="audio-count-time"></div>
+                    <div class="audio-setbacks">
+                        <i class="audio-this-setbacks">
+                            <span class="audio-backs-btn"></span>
+                        </i>
+                        <span class="audio-cache-setbacks" style="width:100%;"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧按钮区域 -->
+            <div class="audio-btn">
+                <!-- 播放，暂停，上一曲下一曲，音量 -->
+                <div class="audio-select">
+                    <div class="audio-prev"></div>
+                    <div class="audio-play"></div>
+                    <div class="audio-next"></div>
+                    <div class="audio-menu"></div>
+                    <div class="audio-volume"></div>
+                </div>
+                <!-- 设置音量大小 -->
+                <div class="audio-set-volume">
+                    <div class="volume-box">
+                        <i><span></span></i>
+                    </div>
+                </div>
+                <!-- 音乐列表界面 -->
+                <div class="audio-list">
+                    <div class="audio-list-head">
+                        <p>歌曲目录</p>
+                        <span class="menu-close">X</span>
+                    </div>
+                    <ul class="audio-inline"></ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- 音频播放器 end -->
+
+    <script type="text/javascript" src="./js/audio.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        var song = [
+            {
+                "cover" : "./image/xingdeng.jpg",
+                "src" : "./audio/Suara - 星灯.mp3",
+                "title" : "星灯-《传颂之物二人の白皇》游戏主题曲"
+            },
+        ];
+
+        var audioFn = audioPlay({
+            song : song,
+            autoPlay : true
+        });
+    })
+        
+    </script>
+</body>
+</html>
